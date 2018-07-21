@@ -15,7 +15,3 @@ def process_inputs():
     freeform = request.form.get('input_freeform', '')
     return render_template("main_page.html", input_data=dropdown,
                            output="You're a wizard %s." % name)
-
-
-if __name__ == '__main__':
-    app.run()
