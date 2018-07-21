@@ -1,6 +1,5 @@
 from flask import Flask, request, render_template
 app = Flask(__name__)
-app.config["DEBUG"] = True
 
 @app.route('/', methods=['GET'])
 def main():
