@@ -12,5 +12,5 @@ def process_inputs():
     dropdown = request.form.get('input_dropdown', '')
     select = request.form.get('input_select', '')
     freeform = request.form.get('input_freeform', '')
-    return render_template("main_page.html", input_data=dropdown,
+    return render_template("main_page.html", input_data=name,
                            output="You're a wizard %s." % name)
