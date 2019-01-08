@@ -6,11 +6,18 @@ def main():
     # found in ../templates/
     return render_template("main_page.html")
 
+def process_drinks(drinks):
+    # if they choose lemonade, sprite= sour
+    # if they choose powerade, apple jucice, water = sweet
+    if drinks=='lemonade' or drinks== 'sprite':
+        return 'sour'
+
 @app.route('/process_inputs', methods=['POST'])
 def process_inputs():
     name = request.form.get('input_name', '')
-    dropdown = request.form.get('input_dropdown', '')
+    drinks = request.form.get('drinks', '')
     select = request.form.get('input_select', '')
     freeform = request.form.get('input_freeform', '')
     return render_template("main_page.html", input_data=name,
-                           output="You're a wizard %s." % name)
+                          sour_output="You're a sour person %s." % name,
+                           sweet_output="You're a sweet person %s." % name)
