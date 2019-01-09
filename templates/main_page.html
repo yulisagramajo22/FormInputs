@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <title>Quiz?</title>
+    <title>Are you more a sweet or sour?</title>
     <link rel="stylesheet" href="/static/css/custom.css">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <!--<script src="../static/js/bootstrap.min.js"></script>-->
@@ -12,7 +12,7 @@
   </head>
   <body>
     <div id="banner" class="container">
-      <h1 class="display-4"Welcome!</h1>
+    <h1 class="display-4">Sweet or Sour</h1>
     </div>
     <div class="container">
       <form action="{{ url_for('process_inputs') }}" method="post">
@@ -21,6 +21,7 @@
           <input type="text" class="form-control" name="input_name"  id="input_name" placeholder="Yulisa Gramajo">
         </div>
         <div class="form-group">
+          <title>What type of drink do you like?</title>
           <label for="drinks">Example select</label>
           <select class="form-control" name="drinks" id="drinks">
             <option>sprite</option>
@@ -31,13 +32,13 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="input_select">Example multiple select</label>
-          <select multiple class="form-control" name="input_select" id="input_select">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+          <label for="color">Example multiple select</label>
+          <select multiple class="form-control" name="color" id="color">
+            <option>pink</option>
+            <option>green</option>
+            <option>orange</option>
+            <option>blue</option></option>
+            <option>yellow</option>
           </select>
         </div>
         <div class="form-group">

@@ -8,9 +8,12 @@ def main():
 
 def process_drinks(drinks):
     # if they choose lemonade, sprite= sour
-    # if they choose powerade, apple jucice, water = sweet
-    if drinks=='lemonade' or drinks== 'sprite':
+    # if they choose powerade, apple juice, water = sweet
+    if drinks=='lemonade' or drinks=='sprite':
         return 'sour'
+
+    if drinks=='powerade' or drinks=='apple juice' or drinks=='water':
+        return 'sweet'
 
 @app.route('/process_inputs', methods=['POST'])
 def process_inputs():
